@@ -18,7 +18,7 @@
             width: 100%;
             margin: 0;
             background: #fff;
-            padding: 20 px;
+            padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h1 {
@@ -107,8 +107,10 @@
         function handleCredentialResponse(response) {
             const userObject = jwt_decode(response.credential);
             userEmail = userObject.email; // Get the user's email from the token
-            document.getElementById("projectSelectContainer").style.display = "block"; // Show project selection
-            document.getElementById("fetchDataButton").style.display = "block"; // Show Load Data button
+            
+            // Show project selection and fetch data button
+            document.getElementById("projectSelectContainer").style.display = "block"; 
+            document.getElementById("fetchDataButton").style.display = "block"; 
         }
 
         window.onload = function () {
